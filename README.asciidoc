@@ -1,0 +1,10 @@
+== dda - Django Desktop Application
+
+=== Introduction
+
+DDA is an example project to demonstrate how to use Django as a desktop
+application.  It provides an alternative to using a GUI framework such as
+https://docs.python.org/3.4/library/tkinter.html[Tkinter] or
+http://sourceforge.net/projects/pyqt/[PyQt].
+
+It is a work in progress.
