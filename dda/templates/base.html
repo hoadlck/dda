@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <title>Django Desktop Application | {% block title %}Some Title{% endblock %}</title>
+ <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}">
+ <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-select/css/bootstrap-select.css' %}">
+ <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script type="text/javascript" src="{% static 'js/jquery-2.1.1.js' %}"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script type="text/javascript" src="{% static 'bootstrap-select/js/bootstrap-select.js' %}"></script>
+</head>
+
+<body role="document">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/exp/">Example</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administration <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/admin/">All</a></li>
+            <li><a href="/admin/exp/">Example</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<script>
+//Highlight the appropriate navbar setting.
+$(
+  function()
+  {
+    var url = window.location.pathname;
+
+    if (url != "/")
+    {
+      //Calculate base of URL.
+      url = "/" + url.split("/")[1] + "/"
+    }
+    $('.nav a[href="'+url+'"]').parent().addClass('active');
+  }
+ );
+</script>
+
+<div class="container" role="main">
+<div id="contentwrapper">
+<div id="content">
+<h1>{% block content_title %} Title {% endblock %}</h1>
+<p/>
+{% block content %}
+    <p>Someone should be customizing this part...</p>
+{% endblock %}
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+{% block footer %}
+    <p class="text-muted">&copy; 2015 Your Brand Here. All rights reserved.</p>
+{% endblock %}
+  </div>
+</footer>
+
+</body>
+</html>

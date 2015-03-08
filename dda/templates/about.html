@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+{% block content_title %}About{% endblock %}
+
+{% block content %}
+    <p>Powered By:</p>
+    {% if about_list %}
+        <ul>
+        {% for about_instance in about_list %}
+            <li><a href="{{ about_instance.url }}">{{ about_instance.name }} [Version {{ about_instance.version }}]</a></li>
+        {% endfor %}
+            <li><a href="http://jquery.com/">jQuery [Version 2.1.1]</a></li>
+            <li><a href="http://getbootstrap.com/">Bootstrap [Version 3.3.1]</a></li>
+            <ul><li><a href="http://glyphicons.com/">Glyphicons (Graciously donated to Bootstrap)</a></li></ul>
+            <li><a href="http://silviomoreto.github.io/bootstrap-select/">Bootstrap Select [Version 1.6.3]</a></li>
+        </ul>
+    {% else %}
+        <p>None found.</p>
+    {% endif %}
+{% endblock %}

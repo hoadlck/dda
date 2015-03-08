@@ -1,0 +1,42 @@
+/*Fix for top nav bar blocking the top content on the page.
+**See
+**http://stackoverflow.com/questions/10336194/twitter-bootstrap-top-nav-bar-blocking-top-content-of-the-page
+*/
+body
+{
+    padding-top: 60px;
+}
+@media (max-width: 979px)
+{
+    body
+       {
+        padding-top: 0px;
+    }
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
+a:visited
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+#contentwrapper
+{
+    float: left;
+    width: 100%;
+}
+
+#content
+{
+    margin-top:   5px;
+    margin-left: 20px; /*Set left margin to LeftColumnWidth*/
+}
