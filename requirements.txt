@@ -1,0 +1,5 @@
+cx-Freeze (4.3.4)
+Django (1.7.4)
+pip (6.0.7)
+pytz (2014.10)
+setuptools (11.0)
