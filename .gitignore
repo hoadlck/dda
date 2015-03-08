@@ -1,0 +1,15 @@
+## generic files to ignore
+*.pyc
+*.exe
+*.obj
+*.$ln
+__pycache__/
+env/
+*.out
+*.bak
+#*.sqlite3
+*.bundle
+dist/
+build/
+install/bin/
+install/static/
