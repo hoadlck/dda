@@ -8,3 +8,16 @@ https://docs.python.org/3.4/library/tkinter.html[Tkinter] or
 http://sourceforge.net/projects/pyqt/[PyQt].
 
 It is a work in progress.
+
+=== Credits
+
+To allow the Django Desktop Application to access common javascript and css
+files used by the web pages (without having to hit the network), I have
+included copies in this distribution.  Here is a list:
+
+ - http://jquery.com/[jQuery (Version 2.1.1)]
+ - http://getbootstrap.com/[Bootstrap (Version 3.3.1)]
+ - http://glyphicons.com/[Glyphicons] (Graciously donated to Bootstrap)
+ - http://silviomoreto.github.io/bootstrap-select/[Bootstrap Select (Version 1.6.3)]
+
+They are all awesome.
