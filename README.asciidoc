@@ -9,6 +9,34 @@ http://sourceforge.net/projects/pyqt/[PyQt].
 
 It is a work in progress.
 
+=== Developer Initial Setup
+
+First, install Python 3.4.  The application will probably work with any
+3.x version, but it has only been tested on 3.4.
+
+.Initial Install
+-------------------------------------------------------------------------------
+(527)% virtualenv env
+(528)% source env/Scripts/activate
+(env)(529)% pip install -r requirements.txt
+-------------------------------------------------------------------------------
+
+NOTE: The above commands assumes that you have +virtualenv+ on your path.
+      If you do not, then you will need to list the entire path to execute
+      it. +
+      For example, +/c/Python34/Scripts/virtualenv+ would be the path
+      for a Windows install (assuming you were running a Bash shell).
+
+Because this repo includes a database, you do not need to run +migrate+
+to create it yourself.
+
+.Run Application
+-------------------------------------------------------------------------------
+(env)(530)% python manage.py runserver
+-------------------------------------------------------------------------------
+
+Open up your favourite web browser, and navigate to http://127.0.0.1:8000/.
+
 === Credits
 
 To allow the Django Desktop Application to access common javascript and css
