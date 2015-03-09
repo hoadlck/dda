@@ -76,9 +76,8 @@ They are all awesome.
    I think that this may be just fine for simple applications. (And, I have
    been beating my head against it for long enough, that I want to get it
    working from sheer stubbornness.) +
-   +
    See https://bitbucket.org/Lawouach/cherrypy-recipes/[this] example for
-   using CherryPy.
+   using CherryPy. +
    http://tech.jjude.com/make-your-django-application-as-a-stand-alone-desk/[Here]
    is another example. +
    As well as https://github.com/kevinlondon/django-py2app-demo[here]. +
