@@ -30,12 +30,20 @@ NOTE: The above commands assumes that you have +virtualenv+ on your path.
 Because this repo includes a database, you do not need to run +migrate+
 to create it yourself.
 
+=== Usage
+
+At the command line, type the following.
+
 .Run Application
 -------------------------------------------------------------------------------
 (env)(530)% python manage.py runserver
 -------------------------------------------------------------------------------
 
 Open up your favourite web browser, and navigate to http://127.0.0.1:8000/.
+
+At the top of the web page window, you will see the application menu.
+You can access the Administration content under the drop down menu of the
+same name.  The login name is +admin+ and the password is +admin+.
 
 === Credits
 
@@ -49,3 +57,30 @@ included copies in this distribution.  Here is a list:
  - http://silviomoreto.github.io/bootstrap-select/[Bootstrap Select (Version 1.6.3)]
 
 They are all awesome.
+
+=== Things To Do
+
+ - Freeze Application +
+   There is some experimental content that calls cx_freeze, but the resulting
+   executable does not run successfully.
+ - Create Installer +
+   Add http://nsis.sourceforge.net/Main_Page[NSIS] installer for application.
+   This is easy enough to do, but there is not much point in doing it until
+   the freeze problem is addressed.
+ - Use A More Robust Local Webserver +
+   Right now, the application is using the built-in Django webserver
+   (in debug mode!).  Other people that have used Django in this way have
+   used http://www.cherrypy.org/[CherryPy], and I plan on doing the same.
+   Eventually. +
+   I would really like to get this working using the built-in webserver, as
+   I think that this may be just fine for simple applications. (And, I have
+   been beating my head against it for long enough, that I want to get it
+   working from sheer stubbornness.) +
+   +
+   See https://bitbucket.org/Lawouach/cherrypy-recipes/[this] example for
+   using CherryPy.
+   http://tech.jjude.com/make-your-django-application-as-a-stand-alone-desk/[Here]
+   is another example. +
+   As well as https://github.com/kevinlondon/django-py2app-demo[here]. +
+   https://baxeico.wordpress.com/2013/10/13/django-on-windows/[This] example
+   uses Python 2.7, where I am using Python 3.4.
